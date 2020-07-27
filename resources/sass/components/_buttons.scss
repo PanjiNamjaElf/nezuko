@@ -1,0 +1,123 @@
+/*!
+ * @author    Panji Setya Nur Prawira <kstar.panjinamjaelf@gmail.com>
+ * @package   Nezuko - Content Management System
+ * @copyright Copyright (c) 2020, Panji Setya Nur Prawira
+ */
+
+@mixin button-shadow($color) {
+    box-shadow: $btn-box-shadow rgba($color, 0.5);
+}
+
+@each $color, $value in $theme-colors {
+    .btn-#{$color} {
+        @include button-shadow($value);
+    }
+}
+
+.btn {
+    .mdi {
+        &:before {
+            margin-top: -1px;
+        }
+    }
+
+    i {
+        display: inline-block;
+    }
+}
+
+.btn-rounded {
+    border-radius: 2em;
+}
+
+.btn-light,
+.btn-white {
+    color: $gray-900;
+}
+
+.btn-white {
+    border-color: $gray-300;
+
+    @include hover-focus {
+        background-color: $gray-100;
+        border-color: $gray-100;
+    }
+
+    &:focus,
+    &.focus {
+        box-shadow: 0 0 0 $btn-focus-width rgba($gray-300, .3);
+    }
+}
+
+.btn-link {
+    font-weight: $font-weight-normal;
+    color: $link-color;
+    background-color: transparent;
+    @include hover {
+        color: $link-hover-color;
+        text-decoration: $link-hover-decoration;
+        background-color: transparent;
+        border-color: transparent;
+    }
+
+    &:focus,
+    &.focus {
+        text-decoration: $link-hover-decoration;
+        border-color: transparent;
+        box-shadow: none;
+    }
+
+    &:disabled,
+    &.disabled {
+        color: $btn-link-disabled-color;
+        pointer-events: none;
+    }
+}
+
+@each $color,
+$value in $theme-colors {
+    .btn-outline-#{$color} {
+        @include button-outline-variant($value);
+    }
+}
+
+.btn-label {
+    margin: -.55rem .9rem -.55rem -.9rem;
+    padding: .6rem .9rem;
+    background-color: rgba($gray-900, 0.1);
+}
+
+.btn-label-right {
+    margin: (-$btn-padding-y) (-$btn-padding-x) (-$btn-padding-y) ($btn-padding-x);
+    padding: ($btn-padding-y) ($btn-padding-x);
+    background-color: rgba($gray-900, 0.1);
+    display: inline-block;
+}
+
+.btn-xs {
+    padding: .2rem .6rem;
+    font-size: .75rem;
+    border-radius: .15rem;
+}
+
+@mixin button-variant-soft($bg) {
+    color: $bg;
+    background-color: rgba($bg, 0.18);
+    border-color: rgba($bg, 0.12);
+
+    @include hover {
+        color: $white;
+        background-color: $bg;
+    }
+
+    &:focus,
+    &.focus {
+        box-shadow: 0 0 0 $btn-focus-width rgba($bg, .3);
+    }
+}
+
+@each $color, $value in $theme-colors {
+    .btn-soft-#{$color} {
+        @include button-variant-soft($value);
+    }
+}

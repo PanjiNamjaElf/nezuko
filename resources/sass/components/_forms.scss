@@ -1,0 +1,82 @@
+/*!
+ * @author    Panji Setya Nur Prawira <kstar.panjinamjaelf@gmail.com>
+ * @package   Nezuko - Content Management System
+ * @copyright Copyright (c) 2020, Panji Setya Nur Prawira
+ */
+
+.form-control,
+.custom-select {
+    box-shadow: $components-shadow-sm;
+}
+
+.form-control-light {
+    background-color: $input-light-bg !important;
+    border-color: $input-light-bg !important;
+}
+
+input.form-control[type="color"],
+input.form-control[type="range"] {
+    min-height: 39px;
+}
+
+.custom-select.is-invalid, .form-control.is-invalid, .custom-select:invalid, .form-control:invalid,
+.custom-select.is-valid, .form-control.is-valid, .custom-select:valid, .form-control:valid {
+    &:focus {
+        box-shadow: none !important;
+    }
+}
+
+.comment-area-box {
+    .form-control {
+        border-color: $gray-300;
+        border-radius: $input-border-radius $input-border-radius 0 0;
+    }
+
+    .comment-area-btn {
+        background-color: $gray-100;
+        padding: 10px;
+        border: 1px solid $gray-300;
+        border-top: none;
+        border-radius: 0 0 $input-border-radius $input-border-radius;
+    }
+}
+
+.search-bar {
+
+    .form-control {
+        padding-left: 40px;
+        padding-right: 20px;
+        border-radius: 30px;
+    }
+
+    span {
+        position: absolute;
+        z-index: 10;
+        font-size: 16px;
+        line-height: $input-height;
+        left: 13px;
+        top: -2px;
+        color: $text-muted;
+    }
+}
+
+.password-eye {
+    &:before {
+        font-family: Material Design Icons !important;
+        content: "\F0208";
+        font-style: normal;
+        font-weight: 400;
+        font-variant: normal;
+        vertical-align: middle;
+        line-height: 1.2;
+        font-size: 16px;
+    }
+}
+
+.show-password {
+    .password-eye {
+        &:before {
+            content: "\F0209";
+        }
+    }
+}

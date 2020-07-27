@@ -1,0 +1,52 @@
+/*!
+ * @author    Panji Setya Nur Prawira <kstar.panjinamjaelf@gmail.com>
+ * @package   Nezuko - Content Management System
+ * @copyright Copyright (c) 2020, Panji Setya Nur Prawira
+ */
+
+.badge {
+    box-shadow: $components-shadow;
+}
+
+@mixin badge-variant-light($bg) {
+    color: $bg;
+    background-color: rgba($bg, 0.18);
+    box-shadow: none;
+
+    &[href] {
+        @include hover-focus {
+            color: $bg;
+            text-decoration: none;
+            background-color: rgba($bg, 0.4);
+        }
+    }
+}
+
+@mixin badge-variant-outline($bg) {
+    color: $bg;
+    border: 1px solid $bg;
+    background-color: transparent;
+    box-shadow: none;
+
+    &[href] {
+        @include hover-focus {
+            color: $bg;
+            text-decoration: none;
+            background-color: rgba($bg, 0.2);
+        }
+    }
+}
+
+@each $color,
+$value in $theme-colors {
+    .badge-soft-#{$color} {
+        @include badge-variant-light($value);
+    }
+}
+
+@each $color,
+$value in $theme-colors {
+    .badge-outline-#{$color} {
+        @include badge-variant-outline($value);
+    }
+}

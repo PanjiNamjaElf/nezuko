@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @author    Panji Setya Nur Prawira <kstar.panjinamjaelf@gmail.com>
+ * @package   Nezuko - Content Management System
+ * @copyright Copyright (c) 2020, Panji Setya Nur Prawira
+ */
+
+namespace App\Http\Requests\Post;
+
+use Illuminate\Foundation\Http\FormRequest;
+
+class StoreRequest extends FormRequest
+{
+    /**
+     * Determine if the user is authorized to make this request.
+     *
+     * @return bool
+     */
+    public function authorize()
+    {
+        return true;
+    }
+
+    /**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array
+     */
+    public function rules()
+    {
+        return [
+            'title'   => 'required|string',
+            'content' => 'nullable|string',
+            'status'  => 'required|in:published,draft',
+        ];
+    }
+}

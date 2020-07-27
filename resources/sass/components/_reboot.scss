@@ -1,0 +1,20 @@
+/*!
+ * @author    Panji Setya Nur Prawira <kstar.panjinamjaelf@gmail.com>
+ * @package   Nezuko - Content Management System
+ * @copyright Copyright (c) 2020, Panji Setya Nur Prawira
+ */
+
+body {
+    &.loading {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+label {
+    font-weight: $label-font-weight;
+}
+
+button:focus {
+    outline: none;
+}
