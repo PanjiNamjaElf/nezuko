@@ -1,7 +1,6 @@
 <?php
 
 use App\Models\User;
-
 use function Pest\Laravel\assertAuthenticatedAs;
 use function Pest\Laravel\assertGuest;
 use function Pest\Laravel\from;
