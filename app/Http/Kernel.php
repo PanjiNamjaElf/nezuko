@@ -2,7 +2,7 @@
 
 /**
  * @author    Panji Setya Nur Prawira <kstar.panjinamjaelf@gmail.com>
- * @copyright Copyright (c) 2020, Panji Setya Nur Prawira
+ * @copyright Copyright (c) 2020, Nezuko - Content Management System
  */
 
 namespace App\Http;
