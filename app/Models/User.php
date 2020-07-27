@@ -2,7 +2,6 @@
 
 /**
  * @author    Panji Setya Nur Prawira <kstar.panjinamjaelf@gmail.com>
- * @package   Nezuko - Content Management System
  * @copyright Copyright (c) 2020, Panji Setya Nur Prawira
  */
 
@@ -12,7 +11,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
 /**
- * App\Models\User
+ * App\Models\User.
  *
  * @property int $id
  * @property string|null $first_name

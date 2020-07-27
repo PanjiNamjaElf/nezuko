@@ -2,7 +2,6 @@
 
 /**
  * @author    Panji Setya Nur Prawira <kstar.panjinamjaelf@gmail.com>
- * @package   Nezuko - Content Management System
  * @copyright Copyright (c) 2020, Panji Setya Nur Prawira
  */
 
@@ -16,6 +15,6 @@ $factory->define(Post::class, function (Faker $faker) {
         'title'   => $faker->words($faker->numberBetween(2, 10), true),
         'content' => $faker->paragraphs(50, true),
         'status'  => $faker->randomElement(['published', 'draft']),
-        'user_id' => fn() => factory(User::class)->create()->id,
+        'user_id' => fn () => factory(User::class)->create()->id,
     ];
 });

@@ -2,7 +2,6 @@
 
 /**
  * @author    Panji Setya Nur Prawira <kstar.panjinamjaelf@gmail.com>
- * @package   Nezuko - Content Management System
  * @copyright Copyright (c) 2020, Panji Setya Nur Prawira
  */
 
@@ -15,7 +14,7 @@ use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
 
 /**
- * App\Models\Post
+ * App\Models\Post.
  *
  * @property int $id
  * @property int $user_id
