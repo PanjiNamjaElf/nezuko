@@ -50,7 +50,7 @@ jobs:
         uses: shivammathur/setup-php@2.2.2
         with:
           php-version: ${{ matrix.php }}
-          extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, gd
+          extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, gd, imagick
           coverage: none
 
       - name: Setup node.js environment
