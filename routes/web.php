@@ -20,10 +20,6 @@ Route::prefix('auth')->group(function () {
 
 Route::get('/', 'DashboardController@index')->name('home');
 
-Route::name('posts.')->group(function () {
-    Route::get('posts/{post}', 'PostController@show')->name('show');
-});
-
 Route::middleware('guest')->group(function () {
     //
 });
@@ -36,4 +32,10 @@ Route::middleware('guest')->group(function () {
 
 Route::middleware('auth')->group(function () {
     Route::resource('posts', 'PostController')->except('show');
+
+    Route::prefix('posts')->name('posts.')->group(function () {
+        Route::get('{post}', 'PostController@show')
+            ->withoutMiddleware('auth')
+            ->name('show');
+    });
 });
