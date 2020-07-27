@@ -2,7 +2,6 @@
 
 use App\Models\Post;
 use App\Models\User;
-
 use function Pest\Laravel\assertDatabaseHas;
 use function Pest\Laravel\assertDatabaseMissing;
 use function Pest\Laravel\get;
@@ -31,7 +30,6 @@ it('can view create post form', function () {
 
 it('redirect to post index when store new post', function () {
     /** @var \Tests\TestCase $this */
-
     actingAs()->post(route('posts.store'), [
         'title'   => $this->faker->words(10, true),
         'content' => $this->faker->paragraphs(5, true),
@@ -76,7 +74,6 @@ it('forbid if authenticated user doesnt have authority to view edit post form', 
 
 it('redirect to post index if authenticated user has authority to update post', function () {
     /** @var \Tests\TestCase $this */
-
     $user = factory(User::class)->create();
     $post = factory(Post::class)->create([
         'user_id' => $user->id,
@@ -91,7 +88,6 @@ it('redirect to post index if authenticated user has authority to update post', 
 
 it('forbid if authenticated user doesnt have authority to update post', function () {
     /** @var \Tests\TestCase $this */
-
     $post = factory(Post::class)->create();
 
     actingAs()->put(route('posts.update', $post), [
