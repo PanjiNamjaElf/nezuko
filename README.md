@@ -22,6 +22,11 @@
 $ git clone https://github.com/PanjiNamjaElf/nezuko.git
 ```
 
+- Enter the directory
+```shell script
+$ cd nezuko
+```
+
 - Copy `.env.dist` to `.env` and fill it with your APP and DB info
 
 ```shell script
