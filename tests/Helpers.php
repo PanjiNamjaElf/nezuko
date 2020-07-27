@@ -1,15 +1,22 @@
 <?php
-/**
- * @author    Panji Setya Nur Prawira <kstar.panjinamjaelf@gmail.com>
- * @copyright Copyright (c) 2020, Panji Setya Nur Prawira
- */
 
 namespace Tests;
 
+use App\Models\User;
+use Illuminate\Contracts\Auth\Authenticatable;
+
 /**
- * A basic assert example.
+ * Set the currently logged in user for the application.
+ *
+ * @param  \Illuminate\Contracts\Auth\Authenticatable  $user
+ * @param  string|null  $driver
+ * @return TestCase
  */
-function assertExample(): void
+function actingAs(Authenticatable $user = null, string $driver = null)
 {
-    test()->assertTrue(true);
+    if (! $user) {
+        $user = factory(User::class)->create();
+    }
+
+    return test()->actingAs($user);
 }
