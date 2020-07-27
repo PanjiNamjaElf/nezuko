@@ -8,6 +8,8 @@
  <a href="https://github.styleci.io/repos/282619743?branch=master">
   <img src="https://github.styleci.io/repos/282619743/shield?branch=master" alt="StyleCI">
  </a>
+ 
+ ![tests](https://github.com/PanjiNamjaElf/nezuko/workflows/tests/badge.svg)
 </p>
 
 ## 🖥️ Installation
