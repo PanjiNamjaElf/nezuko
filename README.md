@@ -29,4 +29,11 @@ $ php -r "file_exists('.env') || copy('.env.dist', '.env');"
 $ composer install && npm install && npm run prod
 ```
 
+- Setup
+```shell script
+$ php artisan key:generate
+$ php artisan migrate --seed
+$ sudo chown -R www-data: storage bootstrap public config
+```
+
 - You can now go to your site's URL
