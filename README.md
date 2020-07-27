@@ -46,3 +46,8 @@ $ php artisan demo:seed
 ```
 
 - You can now go to your site's URL and login with given credentials when run demo seed
+
+## 🧪 Testing
+```shell script
+$ ./vendor/bin/pest
+```
