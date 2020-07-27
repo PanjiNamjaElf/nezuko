@@ -56,7 +56,7 @@ class Post extends Model
     {
         static::creating(function ($model) {
             /** @var self $model */
-            $model->user_id = auth()->id();
+            $model->user_id = $model->user_id ?: auth()->id();
         });
 
         parent::boot();
