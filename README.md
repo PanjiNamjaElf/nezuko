@@ -40,4 +40,9 @@ $ php artisan migrate --seed
 $ sudo chown -R www-data: storage bootstrap public config
 ```
 
-- You can now go to your site's URL
+- Run demo seed
+```shell script
+$ php artisan demo:seed
+```
+
+- You can now go to your site's URL and login with given credentials when run demo seed
