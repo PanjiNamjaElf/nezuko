@@ -9,7 +9,9 @@
   <img src="https://github.styleci.io/repos/282619743/shield?branch=master" alt="StyleCI">
  </a>
  
- ![tests](https://github.com/PanjiNamjaElf/nezuko/workflows/tests/badge.svg)
+ <a href="https://github.com/PanjiNamjaElf/nezuko/actions">
+  <img src="https://github.com/PanjiNamjaElf/nezuko/workflows/tests/badge.svg">
+ </a>
 </p>
 
 ## 🖥️ Installation
